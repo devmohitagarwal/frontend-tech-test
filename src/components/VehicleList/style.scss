@@ -1,0 +1,23 @@
+.VehicleList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .VehicleList {
+        grid-template-columns: repeat(1, 100%);
+    }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+    .VehicleList {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .VehicleList {
+        grid-template-columns: repeat(2, 50%);
+    }
+}

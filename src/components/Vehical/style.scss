@@ -1,0 +1,98 @@
+@use "../../global-styles.scss" as *;
+.vehical-item {
+    cursor: pointer;
+
+    .vehical-item__details__name {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-bottom: 2px solid #000;
+        border-top: 2px solid;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 16px;
+        padding: 3px 0px;
+        letter-spacing: 1px;
+    }
+    .vehical-item__details__price {
+        text-align: center;
+        color: $gray-color;
+        margin-bottom: 12px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .vehical-item__details__description {
+        text-align: center;
+        color: $gray-color;
+        margin-bottom: 12px;
+        font-size: 14px;
+        padding: 0px 8px;
+    }
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .vehical-item {
+        display: flex;
+        height: 120px;
+
+        .vehical-item__poster img {
+            aspect-ratio: 900/900;
+            height: 100%;
+        }
+        .vehical-item__details {
+            padding: 0px 16px;
+            border-bottom: 1px solid #eee;
+            width: calc(100% - 120px);
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+
+        .vehical-item__details__name {
+            text-align: left;
+            border-bottom: none;
+            padding: 0px;
+            border-top: none;
+            margin: 16px 0px 6px 0px;
+        }
+        .vehical-item__details__price {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .vehical-item__details__description {
+            text-align: left;
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            padding: 0px 0px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .vehical-item__poster img {
+        aspect-ratio: 1600 / 900;
+        width: 100%;
+    }
+    .vehical-item__details {
+        border-right: 1px solid #bbbbbb78;
+    }
+}
+
+@media (min-width: 768px) {
+    .vehical-item {
+        display: flex;
+        flex-flow: column;
+    }
+    .vehical-item__poster img {
+        aspect-ratio: 1600 / 900;
+        width: 100%;
+        height: 100%;
+    }
+    .vehical-item__details {
+        border-right: 1px solid #bbbbbb78;
+    }
+}
